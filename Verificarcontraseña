@@ -1,0 +1,19 @@
+def pwd_correcta(pwd):
+    n=False
+    mayuscula=False
+    for x in pwd:
+        if x.isdigit()==True:
+            n=True;
+    for x in pwd:
+        if x.isupper()==True:
+            mayuscula=True;
+    if n==True and mayuscula==True and len(pwd)>=8:
+        return True
+    return False
+
+clave = str(input("Por favor, introduce la clave: "))
+
+if pwd_correcta(clave):
+    print('Cumple requisitos')
+else:
+    print('No cumple con los requisitos')
